@@ -6,7 +6,7 @@ Configure and building scripts includes:
 - PUMIPic master branch
 - EnGPar
 - PETSc 3.16.1
-- XGCm master cz/perlmutter
+- XGCm cz/perlmutter
 ```
 
 Also include run script on Perlmutter.

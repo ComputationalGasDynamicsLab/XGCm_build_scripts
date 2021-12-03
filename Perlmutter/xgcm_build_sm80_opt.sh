@@ -41,7 +41,7 @@ cd $installroot
 mkdir -p xgcm_opt/build
 cd xgcm_opt/build
 
-cmake $xgcmsrc -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=CC \
+cmake $xgcmsrc -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=CC \
                -DIS_TESTING=ON -DCMAKE_INSTALL_PREFIX=$xgcm \
                -DXGCM_GPU_SOLVE=OFF -DXGCM_INIT_GENE_PERT=ON \
                -DXGC_DATA_DIR=$xgcmtestdir \

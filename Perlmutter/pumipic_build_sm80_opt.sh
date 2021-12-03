@@ -1,7 +1,7 @@
 module load PrgEnv-gnu
 module load cmake/3.20.5
 module load cpe-cuda
-module load cuda/11.1.1
+module load cuda/11.3.0
 
 export cuda=$CUDA_DIR
 export PATH=$cuda/bin:$PATH
@@ -32,11 +32,11 @@ export OMPI_CXX=$kksrc/bin/nvcc_wrapper
 cd $installroot
 mkdir -p pumi-pic/build
 cd pumi-pic/build
-cmake $pumipicsrc -DCMAKE_BUILD_TYPE=Release \
-                  -DCMAKE_CXX_COMPILER=CC -DIS_TESTING=OFF \
+cmake $pumipicsrc -DCMAKE_BUILD_TYPE=Debug \
+                  -DCMAKE_CXX_COMPILER=CC \
+                  -DIS_TESTING=OFF \
                   -DCMAKE_INSTALL_PREFIX=$pumipic \
                   -DTEST_DATA_DIR=$testdir
 
 
-make -j4 install
-
+make -j8 install

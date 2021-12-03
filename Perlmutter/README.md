@@ -1,12 +1,20 @@
 # XGCm build scripts for NERSC Perlmutter
 Configure and building scripts includes:
 ```
-- kokkos 3.4.01
-- omega_h master branch
-- PUMIPic master branch
-- EnGPar
-- PETSc 3.16.1
-- XGCm cz/perlmutter
+- kokkos 3.4.01: https://github.com/kokkos/kokkos
+- omega_h master branch: https://github.com/sandialabs/omega_h
+- PUMIPic master branch: https://github.com/SCOREC/pumi-pic
+- EnGPar master branch: https://github.com/SCOREC/EnGPar
+- PETSc 3.16.1: https://gitlab.com/petsc/petsc
+- XGCm cz/perlmutter branch: https://github.com/SCOREC/xgcm
+```
+using `cuda 11.3.0`, `gcc 9.3.0`, `cray-mpich 8.1.10` by loading:
+```
+module load PrgEnv-gnu
+module load cpe-cuda
+module load cmake/3.20.5
+module load cuda/11.3.0
+
 ```
 
 Also include run script on Perlmutter.

@@ -1,7 +1,7 @@
 module load PrgEnv-gnu
 module load cmake/3.20.5
 module load cpe-cuda
-module load cuda/11.1.1
+module load cuda/11.3.0
 
 export cuda=$CUDA_DIR
 export PATH=$cuda/bin:$PATH
@@ -30,7 +30,7 @@ export xgcmsrc=$srcroot/xgcm
 export xgcm=$installroot/xgcm_opt/install
 export xgcmtestdir=$xgcmsrc/xgc1_data
 
-export PETSC_DIR=$srcroot/petsc/
+export PETSC_DIR=$installroot/../petsc/
 export PETSC_ARCH=arch-perlmutter
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$PETSC_DIR/$PETSC_ARCH/lib/pkgconfig
 export CMAKE_PREFIX_PATH=$kk:$oh:$EnGPar:$pumipic:$CMAKE_PREFIX_PATH
@@ -41,12 +41,13 @@ cd $installroot
 mkdir -p xgcm_opt/build
 cd xgcm_opt/build
 
-cmake $xgcmsrc -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=CC \
+cmake $xgcmsrc -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=CC \
                -DIS_TESTING=ON -DCMAKE_INSTALL_PREFIX=$xgcm \
-               -DXGCM_GPU_SOLVE=ON -DXGCM_INIT_GENE_PERT=ON \
+               -DXGCM_GPU_SOLVE=OFF -DXGCM_INIT_GENE_PERT=ON \
                -DXGC_DATA_DIR=$xgcmtestdir \
                -DXGCM_SNES_SOLVE=OFF \
                -DCMAKE_CXX_FLAGS=-g
 
-make -j4 install
 
+make -j8 install
+#VERBOSE=1

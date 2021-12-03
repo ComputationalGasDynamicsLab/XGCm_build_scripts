@@ -1,7 +1,7 @@
 module load PrgEnv-gnu
 module load cpe-cuda
 module load cmake/3.20.5
-module load cuda/11.1.1
+module load cuda/11.3.0
 module load valgrind4hpc/2.12.4
 
 export cuda=$CUDA_DIR

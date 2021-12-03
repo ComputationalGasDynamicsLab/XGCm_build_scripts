@@ -1,7 +1,7 @@
 module load PrgEnv-gnu
 module load cmake/3.20.5
 module load cpe-cuda
-module load cuda/11.1.1
+module load cuda/11.3.0
 
 export cuda=$CUDA_DIR
 export PATH=$cuda/bin:$PATH

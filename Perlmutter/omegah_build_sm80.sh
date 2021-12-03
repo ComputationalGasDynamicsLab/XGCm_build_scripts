@@ -1,7 +1,7 @@
 module load PrgEnv-gnu
 module load cpe-cuda
 module load cmake/3.20.5
-module load cuda/11.1.1
+module load cuda/11.3.1
 
 export cuda=$CUDA_DIR
 export PATH=$cuda/bin:$PATH
@@ -27,4 +27,6 @@ cmake $ohsrc -DCMAKE_BUILD_TYPE=Debug \
              -DCMAKE_CUDA_FLAGS="-I$MPICH_DIR/include" \
              -DKokkos_PREFIX=$kk/lib64/cmake/
 
-make -j4 install
+make -j8 install
+#ctest
+#             -DBUILD_TESTING=ON \

@@ -32,7 +32,7 @@ export OMPI_CXX=$kksrc/bin/nvcc_wrapper
 cd $installroot
 mkdir -p pumi-pic/build
 cd pumi-pic/build
-cmake $pumipicsrc -DCMAKE_BUILD_TYPE=Debug \
+cmake $pumipicsrc -DCMAKE_BUILD_TYPE=Release \
                   -DCMAKE_CXX_COMPILER=CC \
                   -DIS_TESTING=OFF \
                   -DCMAKE_INSTALL_PREFIX=$pumipic \

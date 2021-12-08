@@ -1,5 +1,5 @@
 module load gcc/7.4.0
-module load cuda/10.2.89
+module load cuda/11.0.2
 module load cmake
 
 export cuda=$CUDA_DIR
@@ -42,7 +42,7 @@ cd xgcm_opt/build
 
 cmake $xgcmsrc -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=mpicxx \
                -DIS_TESTING=ON -DCMAKE_INSTALL_PREFIX=$xgcm \
-               -DXGCM_GPU_SOLVE=ON -DXGCM_INIT_GENE_PERT=ON \
+               -DXGCM_GPU_SOLVE=OFF -DXGCM_INIT_GENE_PERT=ON \
                -DXGC_DATA_DIR=$xgcmtestdir \
                -DCMAKE_CXX_FLAGS=-g
 

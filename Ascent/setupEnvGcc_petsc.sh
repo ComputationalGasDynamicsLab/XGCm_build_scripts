@@ -1,5 +1,5 @@
 module load gcc/7.4.0 \
-            cuda/10.2.89 \
+            cuda/11.0.2 \
             cmake/3.18.2 \
             valgrind/3.14.0 \
             hdf5/1.10.4 \

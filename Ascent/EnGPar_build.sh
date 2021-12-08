@@ -1,5 +1,5 @@
 module load gcc/7.4.0
-module load cuda/10.2.89
+module load cuda/11.0.2
 module load cmake/3.18.2
 
 export cuda=$CUDA_DIR

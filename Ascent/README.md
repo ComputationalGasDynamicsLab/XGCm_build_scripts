@@ -5,6 +5,6 @@ Configure and building scripts includes:
 - omega_h master branch
 - PUMIPic master branch
 - EnGPar
-- PETSc 3.15.2
-- XGCm master branch
+- PETSc 3.16.1
+- XGCm branch cz/perlmutter
 ```

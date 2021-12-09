@@ -1,4 +1,4 @@
-export CUDA_ROOT=$CUDA_DIR 
+export CUDA_ROOT=$CRAY_CUDATOOLKIT_DIR
 if [ "$#" -lt 1 ]; then
   ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 else

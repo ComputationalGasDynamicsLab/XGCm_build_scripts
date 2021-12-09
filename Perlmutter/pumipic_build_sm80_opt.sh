@@ -1,9 +1,10 @@
 module load PrgEnv-gnu
-module load cmake/3.20.5
+module load cudatoolkit/21.9_11.4
 module load cpe-cuda
-module load cuda/11.3.0
+module load craype-accel-nvidia80
+module load cmake/3.22.0
 
-export cuda=$CUDA_DIR
+export cuda=$CRAY_CUDATOOLKIT_DIR
 export PATH=$cuda/bin:$PATH
 export LD_LIBRARY_PATH=$cuda/lib64:$LD_LIBRARY_PATH
 export installroot=$PWD

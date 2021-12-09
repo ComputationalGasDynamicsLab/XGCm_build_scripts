@@ -1,4 +1,5 @@
 module load PrgEnv-gnu
+module load cudatoolkit/21.9_11.4
 module load cpe-cuda
-module load cmake/3.20.5
-module load cuda/11.1.1
+module load craype-accel-nvidia80
+module load cmake/3.22.0

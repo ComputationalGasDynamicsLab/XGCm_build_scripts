@@ -1,7 +1,7 @@
 module load PrgEnv-gnu
 module load cudatoolkit/21.9_11.4
 module load cpe-cuda
-module load cray-pmi/6.0.16
+#module load cray-pmi/6.0.16
 module load cmake/3.22.0
 module load valgrind4hpc/2.12.4
 

@@ -21,26 +21,19 @@ export ps=$installroot/particle_structures/install
 export EnGPar=$installroot/EnGPar/install
 
 # Cabana
+export cabanasrc=$srcroot/cabana
 export cabana=$installroot/cabana/install
 
-# pumi-pic
-export pumipicsrc=$srcroot/pumi-pic
-export testdir=$pumipicsrc/pumipic-data
-export pumipic=$installroot/pumi-pic/install
-
-export CMAKE_PREFIX_PATH=$kk:$oh:$EnGPar:$cabana:$CMAKE_PREFIX_PATH
+export CMAKE_PREFIX_PATH=$kk:$oh:$EnGPar:$CMAKE_PREFIX_PATH
 export OMPI_CXX=$kksrc/bin/nvcc_wrapper
 
 cd $installroot
-mkdir -p pumi-pic/build
-cd pumi-pic/build
+mkdir -p cabana/build
+cd cabana/build
 
-cmake $pumipicsrc -DCMAKE_BUILD_TYPE=Release \
+cmake $cabanasrc -DCMAKE_BUILD_TYPE=Release \
                   -DCMAKE_CXX_COMPILER=mpicxx -DIS_TESTING=OFF \
-                  -DENABLE_CABANA=on \
-                  -DCMAKE_INSTALL_PREFIX=$pumipic \
-                  -DTEST_DATA_DIR=$testdir
-
+                  -DCMAKE_INSTALL_PREFIX=$cabana
 
 make -j4 install
 

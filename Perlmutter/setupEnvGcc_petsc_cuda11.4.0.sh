@@ -1,11 +1,11 @@
 module load PrgEnv-gnu
-module load cudatoolkit/21.9_11.4
+module load systemlayer
+module load cuda/11.4.2
 module load cpe-cuda
-#module load cray-pmi/6.0.16
 module load cmake/3.22.0
 module load valgrind4hpc/2.12.4
 
-export cuda=$CRAY_CUDATOOLKIT_DIR
+export cuda=$CUDA_HOME
 export PATH=$cuda/bin:$PATH
 export LD_LIBRARY_PATH=$cuda/lib64:$LD_LIBRARY_PATH
 export installroot=$PWD

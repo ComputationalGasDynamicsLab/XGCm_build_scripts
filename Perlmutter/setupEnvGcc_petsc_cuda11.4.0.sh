@@ -16,3 +16,5 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$PETSC_DIR/$PETSC_ARCH/lib/pkgconfig
 export OMPI_CXX=CC
 export OMPI_CC=cc
 export OMPI_FC=ftn
+
+# using cudatoolkit/21.9_11.4 (the recommened way) instead of cuda/11.4.2, there is issue with compiling PETSc with the options in arch_perlmutter.py.

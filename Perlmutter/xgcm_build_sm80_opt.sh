@@ -1,9 +1,9 @@
 module load PrgEnv-gnu
-module load systemlayer
-module load cuda/11.4.2
+module load cudatoolkit/21.9_11.4
 module load cpe-cuda
 module load craype-accel-nvidia80
 module load cmake/3.22.0
+module unload darshan
 
 export cuda=$CRAY_CUDATOOLKIT_DIR
 export PATH=$cuda/bin:$PATH
@@ -45,7 +45,7 @@ cd xgcm_opt/build
 
 cmake $xgcmsrc -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=CC \
                -DIS_TESTING=ON -DCMAKE_INSTALL_PREFIX=$xgcm \
-               -DXGCM_GPU_SOLVE=OFF -DXGCM_INIT_GENE_PERT=ON \
+               -DXGCM_GPU_SOLVE=ON -DXGCM_INIT_GENE_PERT=OFF \
                -DXGC_DATA_DIR=$xgcmtestdir \
                -DXGCM_SNES_SOLVE=OFF \
                -DCMAKE_CXX_FLAGS="-g"

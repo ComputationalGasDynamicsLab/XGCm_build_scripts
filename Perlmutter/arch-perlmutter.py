@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 if __name__ == '__main__':
   import os
   import sys
@@ -15,7 +15,7 @@ if __name__ == '__main__':
     '--FOPTFLAGS=-g -Ofast -fPIC',
     '--with-cuda',
     '--with-cuda-gencodearch=80',
-    '--with-cudac=nvcc',
+    '--with-cudac=/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/compilers/bin/nvcc',
     '--download-metis',
     '--download-parmetis',
     '--download-openblas'

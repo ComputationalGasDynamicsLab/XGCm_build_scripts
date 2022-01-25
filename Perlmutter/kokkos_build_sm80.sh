@@ -1,9 +1,9 @@
 module load PrgEnv-gnu
-module load systemlayer
-module load cuda/11.4.2
+module load cudatoolkit/21.9_11.4
 module load cpe-cuda
 module load craype-accel-nvidia80
 module load cmake/3.22.0
+module unload darshan
 
 export CRAYPE_LINK_TYPE=dynamic
 export installroot=$PWD

@@ -1,9 +1,9 @@
 module load PrgEnv-gnu
-module load systemlayer
-module load cuda/11.4.2
+module load cudatoolkit/21.9_11.4
 module load cpe-cuda
 module load craype-accel-nvidia80
 module load cmake/3.22.0
+module unload darshan
 
 export cuda=$CRAY_CUDATOOLKIT_DIR
 export PATH=$cuda/bin:$PATH
@@ -22,6 +22,7 @@ cd $installroot
 mkdir -p omega_h/build
 cd omega_h/build
 cmake $ohsrc -DCMAKE_INSTALL_PREFIX=$oh -DBUILD_SHARED_LIBS=OFF \
+             -DCMAKE_BUILD_TYPE=Release \
              -DOmega_h_USE_CUDA=on -DOmega_h_CUDA_ARCH=80 \
              -DOmega_h_USE_Kokkos=ON -DOmega_h_USE_MPI=ON \
              -DCMAKE_CXX_COMPILER=CC \

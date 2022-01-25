@@ -1,9 +1,9 @@
 module load PrgEnv-gnu
-module load systemlayer
-module load cuda/11.4.2
+module load cudatoolkit/21.9_11.4
 module load cpe-cuda
 module load craype-accel-nvidia80
 module load cmake/3.22.0
+module unload darshan
 
 export cuda=$CRAY_CUDATOOLKIT_DIR
 export PATH=$cuda/bin:$PATH
@@ -21,6 +21,7 @@ cd $installroot
 mkdir -p EnGPar/build
 cd EnGPar/build
 cmake $EnGParsrc -DCMAKE_INSTALL_PREFIX=$EnGPar -DCMAKE_C_COMPILER=cc \
+                 -DCMAKE_BUILD_TYPE=Release \
                  -DCMAKE_CXX_COMPILER=CC -DCMAKE_CXX_FLAGS="-std=c++11" \
                  -DENABLE_PARMETIS=OFF -DENABLE_PUMI=OFF -DIS_TESTING=OFF
 

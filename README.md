@@ -1,3 +1,3 @@
 # XGCm build scripts for:
-- NERSC perlmutter
-- ORNL OLCF Ascent
+- NERSC `Perlmutter`
+- ORNL OLCF `Ascent`

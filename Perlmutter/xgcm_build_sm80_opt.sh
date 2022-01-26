@@ -43,6 +43,9 @@ cd $installroot
 mkdir -p xgcm_opt/build
 cd xgcm_opt/build
 
+# below is just a simple way to handle a strange issue, when rebuilding,
+# g++: error: unrecognized command-line option '-rpath'
+rm CMakeCache.txt
 cmake $xgcmsrc -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=CC \
                -DIS_TESTING=ON -DCMAKE_INSTALL_PREFIX=$xgcm \
                -DXGCM_GPU_SOLVE=ON -DXGCM_INIT_GENE_PERT=OFF \

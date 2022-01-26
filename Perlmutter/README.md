@@ -43,14 +43,14 @@ Build the libraries in order:
 ```
 
 (1) To build `PETSc`, do the following in the `PETSc` source directory:
-- source setupEnvGcc_petsc_cudatoolkit11.4.sh;
-- run `./arch-perlmutter.py`;
-- make following the output from `PETSc` configuration.
+- `source setupEnvGcc_petsc_cudatoolkit11.4.sh`;
+- run `./arch-perlmutter.py` to configure;
+- make/build following the output from `PETSc` configuration, something like this:
   ```
-   something like this: make PETSC_DIR=/global/u2/z/zhangc20/xgcm/petsc PETSC_ARCH=arch-perlmutter all
+   make PETSC_DIR=/global/u2/z/zhangc20/xgcm/petsc PETSC_ARCH=arch-perlmutter all
   ```
 
-(2) create a new folder called `install` within the `xgcm_install` directory.
+(2) create a new folder called `install` within the `xgcm_install` directory: `xgcm_install/install`.
 
 (3) copy the build script to the `install` folder and use the build script to build each library, for example:
 ```

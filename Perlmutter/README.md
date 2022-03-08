@@ -11,7 +11,7 @@ Configure and building scripts includes:
 - PETSc 3.16.2: https://gitlab.com/petsc/petsc
 - XGCm cz/perlmutter branch: https://github.com/SCOREC/xgcm, at commit: 96c040d
 ```
-using `cudatoolkit/21.9_11.4`, `gcc 10.3.0`, `cray-mpich-ucx/8.1.11` by loading:
+using `cudatoolkit/21.9_11.4`, `gcc 10.3.0`, `cray-mpich-ucx/8.1.12` by loading:
 ```
 module load PrgEnv-gnu
 module load cudatoolkit/21.9_11.4

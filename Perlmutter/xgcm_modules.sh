@@ -1,5 +1,5 @@
 module load PrgEnv-gnu
-module load cudatoolkit/21.9_11.4
+module load cudatoolkit/11.5
 module load cpe-cuda
 module load craype-accel-nvidia80
 module unload craype-network-ofi

@@ -49,9 +49,9 @@ cd xgcm_opt/build
 # below is just a simple way to handle a strange issue, when rebuilding,
 # g++: error: unrecognized command-line option '-rpath'
 rm CMakeCache.txt
-cmake $xgcmsrc -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=CC \
+cmake $xgcmsrc -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=CC \
                -DIS_TESTING=ON -DCMAKE_INSTALL_PREFIX=$xgcm \
-               -DXGCM_GPU_SOLVE=ON -DXGCM_INIT_GENE_PERT=OFF \
+               -DXGCM_GPU_SOLVE=ON -DXGCM_INIT_GENE_PERT=ON \
                -DXGC_DATA_DIR=$xgcmtestdir \
                -DXGCM_SNES_SOLVE=OFF \
                -DCMAKE_CXX_FLAGS="-g"

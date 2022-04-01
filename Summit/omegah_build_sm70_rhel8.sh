@@ -18,8 +18,7 @@ export OMPI_CXX=$kksrc/bin/nvcc_wrapper
 cd $installroot
 mkdir -p omega_h/build
 cd omega_h/build
-cmake $ohsrc -DCMAKE_BUILD_TYPE=Debug \
-             -DCMAKE_INSTALL_PREFIX=$oh -DBUILD_SHARED_LIBS=OFF \
+cmake $ohsrc -DCMAKE_INSTALL_PREFIX=$oh -DBUILD_SHARED_LIBS=OFF \
              -DOmega_h_USE_CUDA=on -DOmega_h_CUDA_ARCH=70 \
              -DOmega_h_USE_Kokkos=ON -DOmega_h_USE_MPI=on \
              -DCMAKE_CXX_COMPILER=mpiCC \

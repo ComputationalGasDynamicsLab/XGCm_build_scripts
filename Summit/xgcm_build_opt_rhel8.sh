@@ -45,7 +45,7 @@ cmake $xgcmsrc -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=mpicxx \
                -DXGCM_GPU_SOLVE=ON -DXGCM_INIT_GENE_PERT=ON \
                -DXGC_DATA_DIR=$xgcmtestdir \
                -DXGCM_SNES_SOLVE=OFF \
-               -DCMAKE_CXX_FLAGS=-g
+               -DCMAKE_CXX_FLAGS="-g -lineinfo"
 
 make -j8 install
 

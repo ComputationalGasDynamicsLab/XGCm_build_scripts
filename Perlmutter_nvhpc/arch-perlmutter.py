@@ -16,6 +16,7 @@ if __name__ == '__main__':
     '--with-cuda',
     '--with-cuda-gencodearch=80',
     '--with-cudac=nvcc',
+    '--with-fortran-bindings=0',
     '--download-metis',
     '--download-parmetis',
     '--download-openblas'

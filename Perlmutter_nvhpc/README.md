@@ -21,7 +21,7 @@ module unload darshan
 ```
 Note:
 - `module load craype-accel-nvidia80` is just to be able to use the `GPU-aware MPI` later: https://docs.nersc.gov/systems/perlmutter/#gpu-aware-mpi.
-- `cray-mpich/8.1.15` is loaded by default.
+- `cray-mpich/8.1.17` is loaded by default.
 
 Build the libraries in order:
 ```
@@ -60,3 +60,8 @@ Build the libraries in order:
 
 (4) the final `XGCm` binary is in the following location: `xgcm_install/install/xgcm_opt/build/test/XGCm`.
 This can be then copied to the test case directory (or linked in the run script) to run using the supplied run script.
+
+(5) Use `CabanaM` particle data structure by default.
+
+
+

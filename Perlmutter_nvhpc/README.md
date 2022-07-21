@@ -13,6 +13,7 @@ Configure and building scripts includes:
 ```
 using `cudatoolkit/11.5`, `nvhpc` (`nvidia/21.11`), `cray-mpich/8.1.15` by loading:
 ```
+module load PrgEnv-nvidia
 module load cudatoolkit/11.5
 module load craype-accel-nvidia80
 module load cmake/3.22.0

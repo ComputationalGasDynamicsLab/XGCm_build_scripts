@@ -9,23 +9,18 @@ Configure and building scripts includes:
 - PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: 61fbac2
 - EnGPar master branch: https://github.com/SCOREC/EnGPar, at commit: 57b3f57
 - PETSc 3.16.2: https://gitlab.com/petsc/petsc
-- XGCm cz/perlmutter branch: https://github.com/SCOREC/xgcm, at commit: 96c040d
+- XGCm master branch: https://github.com/SCOREC/xgcm, at commit: ad9d69f
 ```
-using `cudatoolkit/11.5`, `gcc 10.3.0`, `cray-mpich-ucx/8.1.12` by loading:
+using `cudatoolkit/11.5`, `gcc 10.3.0`, `cray-mpich/8.1.17` by loading:
 ```
 module load PrgEnv-gnu
 module load cudatoolkit/11.5
 module load cpe-cuda
 module load craype-accel-nvidia80
-module unload craype-network-ofi
-module load craype-network-ucx
-module unload cray-mpich
-module load cray-mpich-ucx/8.1.12
 module load cmake/3.22.0
 ```
 Note:
 - `module load craype-accel-nvidia80` is just to be able to use the `GPU-aware MPI` later: https://docs.nersc.gov/systems/perlmutter/#gpu-aware-mpi.
-- Currently the default `libfabric` module is causing code crash as the simulation progresses. With larger number of particles per GPU, the simulation will generally crash earlier. This is due to the exhaustion of host memory. Likely a bug or memory leak within `libfabric`, or the interaction between `libfacbric` and `Cray Mpich`. The workaround is to use `ucx` for now.
 
 Build the libraries in order:
 ```

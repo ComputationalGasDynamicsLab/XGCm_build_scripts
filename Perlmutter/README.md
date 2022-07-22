@@ -1,6 +1,6 @@
 # XGCm build scripts for NERSC Perlmutter
 
-The folder also include a sample run script on Perlmutter.
+The folder also include a sample run script on Perlmutter with `gcc 10.3.0`.
 
 Configure and building scripts includes:
 ```

@@ -11,7 +11,7 @@
 #SBATCH --job-name=Cyclone_590k_nphi=8
 
 module load PrgEnv-gnu
-module load cudatoolkit/11.5
+module load cudatoolkit/11.7
 module load craype-accel-nvidia80
 export SLURM_CPU_BIND="cores"
 export MPICH_ABORT_ON_ERROR=1

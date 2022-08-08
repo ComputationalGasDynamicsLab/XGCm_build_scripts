@@ -20,6 +20,9 @@ export ps=$installroot/particle_structures/install
 #EnGPar
 export EnGPar=$installroot/EnGPar/install
 
+# cabana
+export cabana=$installroot/cabana/install
+
 # pumi-pic
 export pumipicsrc=$srcroot/pumi-pic
 export pumipic=$installroot/pumi-pic/install
@@ -32,7 +35,7 @@ export xgcmtestdir=$xgcmsrc/xgc1_data
 export PETSC_DIR=$srcroot/petsc/
 export PETSC_ARCH=arch-summit
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$PETSC_DIR/$PETSC_ARCH/lib/pkgconfig
-export CMAKE_PREFIX_PATH=$kk:$oh:$EnGPar:$pumipic:$CMAKE_PREFIX_PATH
+export CMAKE_PREFIX_PATH=$kk:$oh:$EnGPar:$cabana:$pumipic:$CMAKE_PREFIX_PATH
 export OMPI_CXX=$kksrc/bin/nvcc_wrapper
 
 
@@ -44,7 +47,7 @@ cmake $xgcmsrc -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=mpicxx \
                -DIS_TESTING=ON -DCMAKE_INSTALL_PREFIX=$xgcm \
                -DXGCM_GPU_SOLVE=ON -DXGCM_INIT_GENE_PERT=ON \
                -DXGC_DATA_DIR=$xgcmtestdir \
-               -DXGCM_SNES_SOLVE=OFF \
+               -DXGCM_SNES_SOLVE=OFF -DXGCM_PS_CAB=ON \
                -DCMAKE_CXX_FLAGS="-g -lineinfo"
 
 make -j8 install

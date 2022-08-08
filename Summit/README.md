@@ -6,8 +6,9 @@ Configure and building scripts includes:
 ```
 - kokkos 3.1.00: https://github.com/kokkos/kokkos
 - omega_h master branch: hhttps://github.com/SCOREC/omega_h, at commit: 466e470
-- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: dd926f3
 - EnGPar master branch: https://github.com/SCOREC/EnGPar, at commit: 57b3f57
+- Cabana 0.3.0: https://github.com/ECP-copa/Cabana
+- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: dd926f3
 - PETSc 3.15.2: https://gitlab.com/petsc/petsc
 - XGCm master branch: https://github.com/SCOREC/xgcm, at commit: f0fdb91
 ```
@@ -26,17 +27,19 @@ Build the libraries in order:
  - kokkos
  - EnGPar
  - omega_h
+ - Cabana
  - PUMIPic
  - XGCm
 ```
 
 (0) create a folder, for example `xgcm_install`, and clone all the repository in the folder, all repository in separate folder with the following names:
 ```
-   EnGPar
    kokkos
    omega_h
-   petsc
+   EnGPar
+   Cabana
    pumi-pic
+   petsc
    xgcm
 ```
 

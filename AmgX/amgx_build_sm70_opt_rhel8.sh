@@ -18,8 +18,6 @@ cd amgx/build
 
 cmake $amgxsrc -DCMAKE_BUILD_TYPE=Release \
                -DBUILD_SHARED_LIBS=ON -DCUDA_ARCH=70 \
-               -DCMAKE_CXX_FLAGS="-mno-float128"
-               -DCMAKE_CUDA_FLAGS="-Xcompiler -mno-float128"
                -DCMAKE_INSTALL_PREFIX=$amgx
 
 make -j8 install

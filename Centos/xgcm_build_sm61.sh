@@ -14,9 +14,6 @@ export oh=$installroot/omega_h/install
 #EnGPar
 export EnGPar=$installroot/EnGPar/install
 
-# Cabana
-export cabana=$installroot/cabana/install
-
 # pumi-pic
 export pumipic=$installroot/pumi-pic/install
 
@@ -28,7 +25,7 @@ export xgcmtestdir=$xgcmsrc/xgc1_data
 export PETSC_DIR=$srcroot/petsc_3.16.2
 export PETSC_ARCH=arch-centos7
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$PETSC_DIR/$PETSC_ARCH/lib/pkgconfig
-export CMAKE_PREFIX_PATH=$kk:$oh:$EnGPar:$cabana:$pumipic:$CMAKE_PREFIX_PATH
+export CMAKE_PREFIX_PATH=$kk:$oh:$EnGPar:$pumipic:$CMAKE_PREFIX_PATH
 export OMPI_CXX=$kksrc/bin/nvcc_wrapper
 
 cd $installroot

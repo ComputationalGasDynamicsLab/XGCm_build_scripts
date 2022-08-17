@@ -14,15 +14,12 @@ export oh=$installroot/omega_h/install
 #EnGPar
 export EnGPar=$installroot/EnGPar/install
 
-# Cabana
-export cabana=$installroot/cabana/install
-
 # pumi-pic
 export pumipicsrc=$srcroot/pumi-pic
 export testdir=$pumipicsrc/pumipic-data
 export pumipic=$installroot/pumi-pic/install
 
-export CMAKE_PREFIX_PATH=$kk:$oh:$EnGPar:$cabana:$CMAKE_PREFIX_PATH
+export CMAKE_PREFIX_PATH=$kk:$oh:$EnGPar:$CMAKE_PREFIX_PATH
 export OMPI_CXX=$kksrc/bin/nvcc_wrapper
 
 cd $installroot

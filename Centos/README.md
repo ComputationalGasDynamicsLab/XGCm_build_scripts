@@ -56,3 +56,5 @@ for example:
 
 (4) the final `XGCm` binary is in the following location: `xgcm/install/xgcm/build/test/XGCm`.
 This can be then copied to the test case directory (or linked in the run script) to run using the supplied run script.
+
+Note: `Cabana` build script is included, but is not used in XGCm for now (need to use `cz/PS_Cabana` branch of XGCm).

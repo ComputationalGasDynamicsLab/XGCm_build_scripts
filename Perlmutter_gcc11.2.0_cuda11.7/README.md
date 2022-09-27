@@ -5,11 +5,12 @@ The folder also include a sample run script on Perlmutter with `gcc 11.2.0`.
 Configure and building scripts includes:
 ```
 - kokkos 3.4.01: https://github.com/kokkos/kokkos
-- omega_h master branch: https://github.com/sandialabs/omega_h, at commit: a438507
-- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: 61fbac2
+- omega_h main branch v9.34.7: https://github.com/sandialabs/omega_h, at commit: a438507
 - EnGPar master branch: https://github.com/SCOREC/EnGPar, at commit: 57b3f57
-- PETSc 3.16.2: https://gitlab.com/petsc/petsc
-- XGCm master branch: https://github.com/SCOREC/xgcm, at commit: ad9d69f
+- Cabana 0.3.0: https://github.com/ECP-copa/Cabana
+- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: 49bfe25
+- PETSc 3.16.6: https://gitlab.com/petsc/petsc
+- XGCm master branch: https://github.com/SCOREC/xgcm at latest commit
 ```
 using `cudatoolkit/11.7`, `gcc 11.2.0`, `cray-mpich/8.1.17` by loading:
 ```
@@ -27,6 +28,7 @@ Build the libraries in order:
  - kokkos
  - EnGPar
  - omega_h
+ - cabana
  - PUMIPic
  - XGCm
 ```
@@ -36,8 +38,9 @@ Build the libraries in order:
    EnGPar
    kokkos
    omega_h
-   petsc
+   Cabana
    pumi-pic
+   petsc
    xgcm
 ```
 

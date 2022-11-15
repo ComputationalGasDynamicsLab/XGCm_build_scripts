@@ -5,10 +5,10 @@ The folder also include a sample run script on Perlmutter with `gcc 11.2.0`.
 Configure and building scripts includes:
 ```
 - kokkos 3.4.01: https://github.com/kokkos/kokkos
-- omega_h main branch v9.34.7: https://github.com/sandialabs/omega_h, at commit: a438507
+- omega_h master branch: https://github.com/SCOREC/omega_h, at commit: f376fad
 - EnGPar master branch: https://github.com/SCOREC/EnGPar, at commit: 57b3f57
 - Cabana 0.3.0: https://github.com/ECP-copa/Cabana
-- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: 49bfe25
+- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: db2d3ff
 - PETSc 3.16.6: https://gitlab.com/petsc/petsc
 - XGCm master branch: https://github.com/SCOREC/xgcm at latest commit
 ```

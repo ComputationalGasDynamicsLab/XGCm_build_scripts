@@ -3,13 +3,13 @@
 Configure and building scripts include:
 ```
 - kokkos 3.4.01: https://github.com/kokkos/kokkos
-- omega_h master branch: https://github.com/SCOREC/omega_h, at commit: 11eb25d
+- omega_h master branch: https://github.com/SCOREC/omega_h, at commit: f376fad
 - EnGPar master branch: https://github.com/SCOREC/EnGPar, at commit: 57b3f57
-- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: dd926f3
-- PETSc 3.16.2: https://gitlab.com/petsc/petsc
-- XGCm master branch: https://github.com/SCOREC/xgcm, at commit: fe7fcbf
+- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: b1055c8
+- PETSc 3.16.6: https://gitlab.com/petsc/petsc
+- XGCm master branch: https://github.com/SCOREC/xgcm, at commit: e643fd6
 ```
-using `cudatoolkit/11.7.1`, `gcc 7.3.1`, `openmpi 4.1.0`.
+using `cudatoolkit/11.7`, `gcc 7.4.0`, `mpich 3.3.1`.
 
 Build the libraries in order:
 ```
@@ -36,7 +36,7 @@ Build the libraries in order:
 - run `./arch-centos7.py` to configure;
 - make/build following the output from `PETSc` configuration, something like this:
   ```
-   make PETSC_DIR=/hdds1/RPI/xgcm/petsc_3.16.2 PETSC_ARCH=arch-centos7 all
+   make PETSC_DIR=/users/zhangc20/xgcm/petsc PETSC_ARCH=arch-centos7 all
   ```
 
 (2) create a new folder called `install` within the `xgcm` directory: `xgcm/install`.
@@ -57,4 +57,3 @@ for example:
 (4) the final `XGCm` binary is in the following location: `xgcm/install/xgcm/build/test/XGCm`.
 This can be then copied to the test case directory (or linked in the run script) to run using the supplied run script.
 
-Note: `Cabana` build script is included, but is not used in XGCm for now (need to use `cz/PS_Cabana` branch of XGCm).

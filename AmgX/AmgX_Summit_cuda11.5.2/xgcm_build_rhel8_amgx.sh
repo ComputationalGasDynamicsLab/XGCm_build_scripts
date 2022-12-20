@@ -31,18 +31,18 @@ export xgcmtestdir=$xgcmsrc/xgc1_data
 
 # AmgX
 export amgxsrc=$srcroot/amgx
-export amgx=$installroot/amgx/
+export amgx=$installroot/amgx/install
 
 #AmgXWrapper
 export amgx_wrapper_src=$srcroot/AmgXWrapper
-export amgx_wrapper=$installroot/amgx_wrapper/build
+export amgx_wrapper=$installroot/amgx_wrapper/install
 
 export PETSC_DIR=$srcroot/petsc
 export PETSC_ARCH=arch-summit
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$PETSC_DIR/$PETSC_ARCH/lib/pkgconfig
-export CMAKE_PREFIX_PATH=$kk:$oh:$EnGPar:$pumipic:$CMAKE_PREFIX_PATH
+export CMAKE_PREFIX_PATH=$kk:$oh:$EnGPar:$pumipic:$amgx:$amgx_wrapper:$CMAKE_PREFIX_PATH
 export OMPI_CXX=$kksrc/bin/nvcc_wrapper
-
+echo $CMAKE_PREFIX_PATH
 
 cd $installroot
 mkdir -p xgcm_amgx/build
@@ -53,6 +53,6 @@ cmake $xgcmsrc -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=mpicxx \
                -DXGCM_GPU_SOLVE=ON -DXGCM_AMGX_SOLVE=ON \
                -DXGCM_INIT_GENE_PERT=ON \
                -DXGCM_PS_CAB=OFF \
-               -DCMAKE_CXX_FLAGS="-g -lineinfo -I$amgx_wrapper/include -I$amgx/include"
+               -DCMAKE_CXX_FLAGS="-g -lineinfo"
 
-make VERBOSE=1 -j4 #install
+make -j4 install

@@ -20,14 +20,17 @@ export PETSC_DIR=$srcroot/petsc
 export PETSC_ARCH=arch-summit
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$PETSC_DIR/$PETSC_ARCH/lib/pkgconfig
 export CMAKE_PREFIX_PATH=$amgx:$CMAKE_PREFIX_PATH
+export OMPI_CXX=$kksrc/bin/nvcc_wrapper
 
 cd $installroot
 mkdir -p amgx_wrapper/build
 cd amgx_wrapper/build
 
-cmake $amgx_wrapper_src -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=mpicxx \
-                        -DBUILD_SHARED_LIBS=OFF -DCUDA_DIR=$cuda \
-                        -DPETSC_EXECUTABLE_RUNS=ON \
+cmake $amgx_wrapper_src -DCMAKE_BUILD_TYPE=Release \
+                        -DCMAKE_CXX_COMPILER=`which g++` \
+                        -DCMAKE_C_COMPILER=`which gcc` \
+                        -DMPIEXEC_EXECUTABLE=`which mpiexec` \
+                        -DCUDA_DIR=$cuda \
                         -DCMAKE_INSTALL_PREFIX=$amgx_wrapper
 
 make -j4 install

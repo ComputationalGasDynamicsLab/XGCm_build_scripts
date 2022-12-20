@@ -18,8 +18,9 @@ cd amgx/build
 
 cmake $amgxsrc -DCMAKE_BUILD_TYPE=Debug \
                -DBUILD_SHARED_LIBS=ON -DCUDA_ARCH=70 \
-               -DCMAKE_CXX_COMPILER=mpiCC \
-               -DCMAKE_C_COMPILER=mpicc \
+               -DCMAKE_CXX_COMPILER=`which g++` \
+               -DCMAKE_C_COMPILER=`which gcc` \
+               -DMPIEXEC_EXECUTABLE=`which mpiexec` \
                -DCMAKE_INSTALL_PREFIX=$amgx
 
 make -j8 install

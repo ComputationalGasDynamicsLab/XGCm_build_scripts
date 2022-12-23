@@ -27,7 +27,3 @@ After building the above libraries, build XGCm with AmgX support in the followin
  - AmgXWrapper
  - XGCm
 ```
-
-### Note:
-- AmgX build script did not succeed in final installation;
-- AmgXWrapper build scritp did not succeed due to previous AmgX build.

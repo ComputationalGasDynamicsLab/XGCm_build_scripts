@@ -16,7 +16,7 @@ cd $installroot
 mkdir -p amgx/build
 cd amgx/build
 
-cmake $amgxsrc -DCMAKE_BUILD_TYPE=Debug \
+cmake $amgxsrc -DCMAKE_BUILD_TYPE=Release \
                -DBUILD_SHARED_LIBS=ON -DCUDA_ARCH=70 \
                -DCMAKE_CXX_COMPILER=`which g++` \
                -DCMAKE_C_COMPILER=`which gcc` \

@@ -12,7 +12,7 @@ Configure and building scripts includes:
 - PETSc 3.16.6: https://gitlab.com/petsc/petsc
 - XGCm master branch: https://github.com/SCOREC/xgcm at latest commit
 ```
-using `cudatoolkit/11.7`, `gcc 11.2.0`, `cray-mpich/8.1.17` by loading:
+using `cudatoolkit/11.7`, `gcc 11.2.0`, `cray-mpich/8.1.22` by loading:
 ```
 module load PrgEnv-gnu
 module load cudatoolkit/11.7
@@ -61,3 +61,7 @@ Build the libraries in order:
 
 (4) the final `XGCm` binary is in the following location: `xgcm_install/install/xgcm_opt/build/test/XGCm`.
 This can be then copied to the test case directory (or linked in the run script) to run using the supplied run script.
+
+Note for building with OpenMP:
+ - in `kokkos` build script, change `-DKokkos_ENABLE_OPENMP=OFF` to `-DKokkos_ENABLE_OPENMP=ON`;
+ - in `omega_h` build script, add `-DOmega_h_USE_OpenMP=ON` to cmake.

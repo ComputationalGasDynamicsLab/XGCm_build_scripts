@@ -2,8 +2,10 @@ cuda=/usr/local/cuda-11.7
 export PATH=$cuda/bin:$PATH
 export LD_LIBRARY_PATH=$cuda/lib64:$LD_LIBRARY_PATH
 export installroot=$PWD
-export kk=$installroot/kokkos/install # this is where kokkos will be installed
 export srcroot=$installroot/../
+
+# kokkos
+export kk=$installroot/kokkos/install
 export kksrc=$srcroot/kokkos
 
 cd $installroot

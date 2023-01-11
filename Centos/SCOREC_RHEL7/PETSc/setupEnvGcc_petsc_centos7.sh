@@ -12,8 +12,6 @@ cuda=/usr/local/cuda-11.7
 export PATH=$cuda/bin:$PATH
 export LD_LIBRARY_PATH=$cuda/lib64:$LD_LIBRARY_PATH
 export srcroot=$PWD
-export kksrc=$srcroot/../kokkos
-export MPICH_CXX=$kksrc/bin/nvcc_wrapper
 
 export PETSC_DIR=$srcroot
 export PETSC_ARCH=arch-centos7

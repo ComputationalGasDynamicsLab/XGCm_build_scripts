@@ -35,9 +35,9 @@ mkdir -p xgcm/build
 cd xgcm/build
 
 cmake $xgcmsrc -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+               -DBUILD_SHARED_LIBS=OFF \
                -DCMAKE_CXX_COMPILER=mpicxx \
                -DCMAKE_CXX_FLAGS="-g" \
-               -DBUILD_SHARED_LIBS=OFF \
                -DXGCM_INIT_GENE_PERT=OFF \
                -DXGCM_GPU_SOLVE=ON \
                -DXGCM_PS_CAB=OFF \

@@ -19,7 +19,6 @@ export cabana=$installroot/cabana/install
 
 # pumi-pic
 export pumipicsrc=$srcroot/pumi-pic
-export testdir=$pumipicsrc/pumipic-data
 export pumipic=$installroot/pumi-pic/install
 
 export CMAKE_PREFIX_PATH=$kk:$oh:$EnGPar:$cabana:$CMAKE_PREFIX_PATH
@@ -29,14 +28,12 @@ mkdir -p pumi-pic/build
 cd pumi-pic/build
 
 cmake $pumipicsrc -DCMAKE_BUILD_TYPE=Release \
-                  -DCMAKE_CXX_COMPILER=mpicxx \
-                  -DIS_TESTING=ON \
-                  -DENABLE_CABANA=ON \
                   -DBUILD_SHARED_LIBS=OFF \
+                  -DCMAKE_CXX_COMPILER=mpicxx \
+                  -DENABLE_CABANA=ON \
                   -DPS_IS_TESTING=ON \
                   -DCMAKE_INSTALL_PREFIX=$pumipic \
                   -DCMAKE_CXX_FLAGS="-fPIC" \
-                  -DTEST_DATA_DIR=$testdir
 
 make -j4 install
 ctest

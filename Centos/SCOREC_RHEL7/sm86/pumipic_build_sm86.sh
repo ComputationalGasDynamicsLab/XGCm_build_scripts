@@ -4,7 +4,7 @@ module load gcc/11.2.0
 module load mpich/4.0.2
 module load cmake
 
-cuda=/usr/local/cuda-12.1
+cuda=/usr/local/cuda-11.4
 export PATH=$cuda/bin:$PATH
 export LD_LIBRARY_PATH=$cuda/lib64:$LD_LIBRARY_PATH
 export installroot=$PWD

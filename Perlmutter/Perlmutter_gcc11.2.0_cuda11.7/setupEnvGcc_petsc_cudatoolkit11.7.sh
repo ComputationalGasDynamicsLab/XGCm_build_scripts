@@ -2,8 +2,7 @@ module load PrgEnv-gnu
 module load cudatoolkit/11.7
 module load craype-accel-nvidia80
 module load cmake/3.22.0
-module load valgrind4hpc/2.12.7
-module unload darshan
+module load valgrind4hpc/2.12.11
 
 export cuda=$CRAY_CUDATOOLKIT_DIR
 export PATH=$cuda/bin:$PATH

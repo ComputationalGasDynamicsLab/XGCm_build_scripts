@@ -35,7 +35,7 @@ export xgcmsrc=$srcroot/xgcm
 export xgcm=$installroot/xgcm_opt/install
 export xgcmtestdir=$xgcmsrc/xgc1_data
 
-export PETSC_DIR=$installroot/../petsc_cuda11.7/
+export PETSC_DIR=$installroot/../petsc
 export PETSC_ARCH=arch-perlmutter
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$PETSC_DIR/$PETSC_ARCH/lib/pkgconfig
 export CMAKE_PREFIX_PATH=$kk:$oh:$EnGPar:$cabana:$pumipic:$CMAKE_PREFIX_PATH
@@ -51,10 +51,10 @@ cd xgcm_opt/build
 rm CMakeCache.txt
 cmake $xgcmsrc -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=CC \
                -DIS_TESTING=ON -DCMAKE_INSTALL_PREFIX=$xgcm \
-               -DXGCM_GPU_SOLVE=ON -DXGCM_INIT_GENE_PERT=OFF \
+               -DXGCM_GPU_SOLVE=ON -DXGCM_INIT_GENE_PERT=ON \
                -DXGC_DATA_DIR=$xgcmtestdir \
                -DXGCM_SNES_SOLVE=OFF \
-               -DXGCM_PS_CAB=ON \
+               -DXGCM_PS_CAB=OFF \
                -DCMAKE_CXX_FLAGS="-g"
 
 make -j8 install

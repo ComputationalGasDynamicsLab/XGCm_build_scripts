@@ -27,5 +27,5 @@ cmake $cabanasrc -DCMAKE_BUILD_TYPE=Release \
                  -DCMAKE_CXX_COMPILER=CC \
                  -DCMAKE_INSTALL_PREFIX=$cabana
 
-make install -j4
+make -j8 install
 

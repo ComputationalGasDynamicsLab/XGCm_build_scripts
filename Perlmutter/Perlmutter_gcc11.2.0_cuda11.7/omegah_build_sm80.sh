@@ -23,6 +23,7 @@ cmake $ohsrc -DCMAKE_INSTALL_PREFIX=$oh -DBUILD_SHARED_LIBS=OFF \
              -DCMAKE_BUILD_TYPE=Release \
              -DOmega_h_USE_CUDA=on -DOmega_h_CUDA_ARCH=80 \
              -DOmega_h_USE_Kokkos=ON -DOmega_h_USE_MPI=ON \
+             -DOmega_h_USE_OpenMP=OFF \
              -DBUILD_TESTING=OFF \
              -DCMAKE_CXX_COMPILER=CC \
              -DCMAKE_CXX_FLAGS='-std=c++14' \

@@ -24,6 +24,5 @@ cmake $kksrc \
       -DKokkos_ENABLE_CUDA=ON \
       -DKokkos_ENABLE_CUDA_LAMBDA=ON \
       -DKokkos_ENABLE_DEBUG=OFF \
-      -DKokkos_ENABLE_PROFILING=ON \
       -DCMAKE_INSTALL_PREFIX=$kk
 make -j4 install

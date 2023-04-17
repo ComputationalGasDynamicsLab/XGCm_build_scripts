@@ -1,16 +1,15 @@
-# XGCm build scripts for Centos 7 with cuda 12.1 and gcc 11.2.0
-- currently not fully working due to `thrust` issue building `omega_h`
+# XGCm build scripts for Centos 7 with cuda 11.4 and gcc 11.2.0
 
 Configure and building scripts include:
 ```
 - kokkos 3.7.00: https://github.com/kokkos/kokkos
-- omega_h master branch: https://github.com/SCOREC/omega_h, at commit: f376fad
+- omega_h master branch: https://github.com/SCOREC/omega_h, at commit: c2109d2
 - EnGPar master branch: https://github.com/SCOREC/EnGPar, at commit: 57b3f57
-- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: b1055c8
+- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: a1cadc0
 - PETSc 3.16.6: https://gitlab.com/petsc/petsc
-- XGCm master branch: https://github.com/SCOREC/xgcm, at commit: e643fd6
+- XGCm master branch: https://github.com/SCOREC/xgcm, at commit: 7935831
 ```
-using `cudatoolkit/12.1`, `gcc 11.2.0`, `mpich 4.0.2`.
+using `cudatoolkit/11.4`, `gcc 11.2.0`, `mpich 4.0.2`.
 
 Build the libraries in order:
 ```
@@ -37,7 +36,7 @@ Build the libraries in order:
 - run `./arch-centos7.py` to configure;
 - make/build following the output from `PETSc` configuration, something like this:
   ```
-   make PETSC_DIR=/users/zhangc20/xgcm/petsc PETSC_ARCH=arch-centos7 all
+   make PETSC_DIR=/users/zhangc20/xgcm/petsc_3.16.6_cuda11.4_gcc11.2 PETSC_ARCH=arch-centos7 all
   ```
 
 (2) create a new folder called `install` within the `xgcm` directory: `xgcm/install`.
@@ -52,7 +51,7 @@ Build the libraries in order:
 ```
 for example:
 ```
-./kokkos_build_sm61.sh
+./kokkos_build_sm86.sh
 ```
 
 (4) the final `XGCm` binary is in the following location: `xgcm/install/xgcm/build/test/XGCm`.

@@ -28,7 +28,7 @@ export xgcmsrc=$srcroot/xgcm
 export xgcm=$installroot/xgcm/install
 export xgcmtestdir=$xgcmsrc/xgc1_data
 
-export PETSC_DIR=$srcroot/petsc_cuda11.4_gcc11.2
+export PETSC_DIR=$srcroot/petsc_3.16.6_cuda11.4_gcc11.2
 export PETSC_ARCH=arch-centos7
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$PETSC_DIR/$PETSC_ARCH/lib/pkgconfig
 export CMAKE_PREFIX_PATH=$kk:$oh:$EnGPar:$pumipic:$CMAKE_PREFIX_PATH

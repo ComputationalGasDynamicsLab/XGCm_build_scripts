@@ -7,7 +7,7 @@ Configure and building scripts include:
 - EnGPar master branch: https://github.com/SCOREC/EnGPar, at commit: 57b3f57
 - PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: a1cadc0
 - PETSc 3.19.0: https://gitlab.com/petsc/petsc
-- XGCm master branch: https://github.com/SCOREC/xgcm, at commit: 7935831
+- XGCm `cz/petsc_3.19.0` branch: https://github.com/SCOREC/xgcm, at commit: 5f7782a
 ```
 using `cudatoolkit/12.1`, `gcc 11.2.0`, `mpich 4.0.2`.
 

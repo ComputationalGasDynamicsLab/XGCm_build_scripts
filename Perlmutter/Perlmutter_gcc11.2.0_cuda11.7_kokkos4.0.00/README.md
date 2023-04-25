@@ -22,6 +22,9 @@ module load cmake/3.22.0
 Note:
 - `module load craype-accel-nvidia80` is just to be able to use the `GPU-aware MPI`
    later: https://docs.nersc.gov/systems/perlmutter/#gpu-aware-mpi.
+- `PETSc 3.19.0` currently is not compatible with `XGCm` when using distributed
+   mesh. As such, `PETSc 3.16.6` should be used when using distributed mesh,
+   i.e., more than one mesh partition per poloidal plane.
 
 Build the libraries in order:
 ```

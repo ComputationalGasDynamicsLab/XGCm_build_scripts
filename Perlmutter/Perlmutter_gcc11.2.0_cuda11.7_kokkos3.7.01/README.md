@@ -4,13 +4,13 @@ The folder also include a sample run script on Perlmutter with `gcc 11.2.0`.
 
 Configure and building scripts includes:
 ```
-- kokkos 3.4.01: https://github.com/kokkos/kokkos
-- omega_h master branch: https://github.com/SCOREC/omega_h, at commit: 1524449
+- kokkos 3.7.01: https://github.com/kokkos/kokkos
+- omega_h master branch: https://github.com/SCOREC/omega_h, at commit: e1be29b
 - EnGPar master branch: https://github.com/SCOREC/EnGPar, at commit: 57b3f57
 - Cabana 0.5.0: https://github.com/ECP-copa/Cabana
-- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: a1cadc0
+- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: 68c4064
 - PETSc 3.16.6: https://gitlab.com/petsc/petsc
-- XGCm master branch: https://github.com/SCOREC/xgcm at commit: 90dbbe8
+- XGCm master branch: https://github.com/SCOREC/xgcm at commit: 8345623
 ```
 using `cudatoolkit/11.7`, `gcc 11.2.0`, `cray-mpich/8.1.25` by loading:
 ```

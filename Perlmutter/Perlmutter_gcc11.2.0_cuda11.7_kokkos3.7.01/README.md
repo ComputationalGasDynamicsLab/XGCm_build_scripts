@@ -5,14 +5,14 @@ The folder also include a sample run script on Perlmutter with `gcc 11.2.0`.
 Configure and building scripts includes:
 ```
 - kokkos 3.4.01: https://github.com/kokkos/kokkos
-- omega_h master branch: https://github.com/SCOREC/omega_h, at commit: f376fad
+- omega_h master branch: https://github.com/SCOREC/omega_h, at commit: 1524449
 - EnGPar master branch: https://github.com/SCOREC/EnGPar, at commit: 57b3f57
-- Cabana 0.3.0: https://github.com/ECP-copa/Cabana
-- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: db2d3ff
+- Cabana 0.5.0: https://github.com/ECP-copa/Cabana
+- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: a1cadc0
 - PETSc 3.16.6: https://gitlab.com/petsc/petsc
-- XGCm master branch: https://github.com/SCOREC/xgcm at latest commit
+- XGCm master branch: https://github.com/SCOREC/xgcm at commit: 90dbbe8
 ```
-using `cudatoolkit/11.7`, `gcc 11.2.0`, `cray-mpich/8.1.22` by loading:
+using `cudatoolkit/11.7`, `gcc 11.2.0`, `cray-mpich/8.1.25` by loading:
 ```
 module load PrgEnv-gnu
 module load cudatoolkit/11.7
@@ -59,9 +59,10 @@ Build the libraries in order:
 ./kokkos_build_sm80.sh
 ```
 
-(4) the final `XGCm` binary is in the following location: `xgcm_install/install/xgcm_opt/build/test/XGCm`.
+(4) the final `XGCm` binary is in the following location: `xgcm_install/install/xgcm_petsc_3.16.6/build/test/XGCm`.
 This can be then copied to the test case directory (or linked in the run script) to run using the supplied run script.
 
 Note for building with OpenMP:
  - in `kokkos` build script, change `-DKokkos_ENABLE_OPENMP=OFF` to `-DKokkos_ENABLE_OPENMP=ON`;
- - in `omega_h` build script, add `-DOmega_h_USE_OpenMP=ON` to cmake.
+ - in `omega_h` build script, add `-DOmega_h_USE_OpenMP=ON` to cmake;
+ - normally in `XGCm` build, OpenMP is not used.

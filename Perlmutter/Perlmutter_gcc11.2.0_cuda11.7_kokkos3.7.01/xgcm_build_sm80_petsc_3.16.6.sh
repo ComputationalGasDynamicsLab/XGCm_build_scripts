@@ -32,7 +32,7 @@ export pumipic=$installroot/pumi-pic/install
 
 # xgcm
 export xgcmsrc=$srcroot/xgcm
-export xgcm=$installroot/xgcm_opt/install
+export xgcm=$installroot/xgcm_petsc_3.16.6/install
 export xgcmtestdir=$xgcmsrc/xgc1_data
 
 export PETSC_DIR=$installroot/../petsc_3.16.6

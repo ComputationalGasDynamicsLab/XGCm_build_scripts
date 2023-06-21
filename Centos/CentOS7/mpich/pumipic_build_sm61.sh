@@ -32,6 +32,8 @@ cmake $pumipicsrc -DCMAKE_BUILD_TYPE=Release \
                   -DCMAKE_CXX_COMPILER=mpicxx \
                   -DENABLE_CABANA=ON \
                   -DPS_IS_TESTING=ON \
+                  -DIS_TESTING=ON \
+                  -DTEST_DATA_DIR=$pumipicsrc/pumipic-data \
                   -DCMAKE_INSTALL_PREFIX=$pumipic \
                   -DCMAKE_CXX_FLAGS="-fPIC" \
 

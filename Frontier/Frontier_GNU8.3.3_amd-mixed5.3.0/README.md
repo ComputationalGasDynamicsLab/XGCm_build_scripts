@@ -5,7 +5,7 @@ Configure and building scripts includes:
 - PETSc 3.16.6: https://gitlab.com/petsc/petsc
 - kokkos 4.0.01: https://github.com/kokkos/kokkos
 ```
-using `craype/2.7.19`, `amd-mixed/5.3.0`, `cray-mpich/8.1.23` by loading:
+using `craype/2.7.19`, `amd-mixed/5.3.0`, `cray-mpich/8.1.23`, and `gcc 12.2.0` by loading:
 ```
 module load PrgEnv-gnu
 module load amd-mixed

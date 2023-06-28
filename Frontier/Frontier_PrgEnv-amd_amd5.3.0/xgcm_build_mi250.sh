@@ -33,7 +33,7 @@ export xgcmsrc=$srcroot/xgcm
 export xgcm=$installroot/xgcm_petsc3.16.6/install
 export xgcmtestdir=$xgcmsrc/xgc1_data
 
-export PETSC_DIR=$installroot/../petsc3.16.6
+export PETSC_DIR=$installroot/../petsc_3.16.6
 export PETSC_ARCH=arch-perlmutter
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$PETSC_DIR/$PETSC_ARCH/lib/pkgconfig
 export CMAKE_PREFIX_PATH=$kk:$oh:$EnGPar:$cabana:$pumipic:$CMAKE_PREFIX_PATH
@@ -46,7 +46,6 @@ cd xgcm_petsc3.16.6/build
 
 cmake $xgcmsrc -DCMAKE_BUILD_TYPE=RelWithDebInfo \
                -DCMAKE_CXX_COMPILER=CC \
-               -DCMAKE_CXX_EXTENSIONS=OFF \
                -DCMAKE_CXX_FLAGS="-g" \
                -DXGCM_USE_HIP=ON \
                -DXGCM_USE_CUDA=OFF \

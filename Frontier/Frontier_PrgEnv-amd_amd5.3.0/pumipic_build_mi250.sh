@@ -32,8 +32,8 @@ cd pumi-pic/build
 
 cmake $pumipicsrc -DCMAKE_BUILD_TYPE=RelWithDebInfo \
                   -DCMAKE_CXX_COMPILER=CC \
-                  -DIS_TESTING=OFF \
-                  -DPS_IS_TESTING=OFF \
+                  -DIS_TESTING=ON \
+                  -DPS_IS_TESTING=ON \
                   -DTEST_DATA_DIR=$testdir \
                   -DCMAKE_INSTALL_PREFIX=$pumipic
 

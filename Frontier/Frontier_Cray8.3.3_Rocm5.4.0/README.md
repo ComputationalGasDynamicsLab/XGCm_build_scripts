@@ -52,3 +52,5 @@ Build the libraries in order:
 
 (4) the final `XGCm` binary is in the following location: `xgcm_install/install/xgcm_petsc3.16.6/build/test/XGCm`.
 This can be then copied to the test case directory (or linked in the run script) to run using the supplied run script.
+
+Note: this script is currently not working.

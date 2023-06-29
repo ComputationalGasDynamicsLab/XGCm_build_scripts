@@ -14,14 +14,15 @@ if __name__ == '__main__':
     '--COPTFLAGS=-g -O3 -fPIC',
     '--CXXOPTFLAGS=-g -O3 -fPIC',
     '--FOPTFLAGS=-g -O3 -fPIC',
-    '--with-shared-libraries=0',
+    '--with-fortran-bindings=0',
+    '--with-shared-libraries=1',
     '--with-make-np=8',
     '--download-metis',
     '--download-parmetis',
     '--download-triangle',
     '--download-blas',
     '--download-lapack',
-    '--HIPOPTFLAGS=-Ofast --amdgpu-target=gfx906,gfx908',
+    '--HIPOPTFLAGS=-Ofast --offload-arch=gfx90a',
     '--with-debugging=no',
   ]
   configure.petsc_configure(configure_options)

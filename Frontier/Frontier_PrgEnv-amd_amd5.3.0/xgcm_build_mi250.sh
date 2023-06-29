@@ -37,8 +37,6 @@ export PETSC_DIR=$installroot/../petsc_3.16.6
 export PETSC_ARCH=arch-perlmutter
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$PETSC_DIR/$PETSC_ARCH/lib/pkgconfig
 export CMAKE_PREFIX_PATH=$kk:$oh:$EnGPar:$cabana:$pumipic:$CMAKE_PREFIX_PATH
-export OMPI_CXX=$kksrc/bin/nvcc_wrapper
-
 
 cd $installroot
 mkdir -p xgcm_petsc3.16.6/build

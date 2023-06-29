@@ -12,7 +12,3 @@ export installroot=$PWD
 export PETSC_DIR=$installroot
 export PETSC_ARCH=arch-frontier
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$PETSC_DIR/$PETSC_ARCH/lib/pkgconfig
-
-export OMPI_CXX=CC
-export OMPI_CC=cc
-export OMPI_FC=ftn

@@ -44,6 +44,7 @@ cd xgcm_petsc3.16.6/build
 
 cmake $xgcmsrc -DCMAKE_BUILD_TYPE=RelWithDebInfo \
                -DCMAKE_CXX_COMPILER=CC \
+               -DCMAKE_CXX_EXTENSIONS=Off \
                -DCMAKE_CXX_FLAGS="-g" \
                -DXGCM_USE_HIP=ON \
                -DXGCM_USE_CUDA=OFF \

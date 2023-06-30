@@ -14,7 +14,7 @@ cd $installroot
 mkdir -p kokkos/build
 cd kokkos/build
 cmake $kksrc \
-       -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+      -DCMAKE_BUILD_TYPE=RelWithDebInfo \
       -DCMAKE_CXX_COMPILER=CC \
       -DCMAKE_CXX_EXTENSIONS=OFF \
       -DKokkos_ARCH_VEGA90A=ON \

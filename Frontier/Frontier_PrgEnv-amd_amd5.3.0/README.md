@@ -7,7 +7,7 @@ Configure and building scripts includes:
 - omega_h `reducedThrust` branch: https://github.com/SCOREC/omega_h, at commit: 5e33307
 - EnGPar master branch: https://github.com/SCOREC/EnGPar, at commit: 57b3f57
 - PUMIPic `ac/replace-cuda-thrust` branch: https://github.com/SCOREC/pumi-pic, at commit: a37a37b
-- XGCm `cz/frontier` branch: https://github.com/SCOREC/xgcm at commit: 61dde9d
+- XGCm master branch: https://github.com/SCOREC/xgcm at commit: 7ba8853
 ```
 using `craype/2.7.19`, `PrgEnv-amd/8.3.3` `amd/5.3.0`, `cray-mpich/8.1.23`, and `cmake/3.23.2` by loading:
 ```

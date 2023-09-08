@@ -5,23 +5,24 @@ The folder also include a sample run script on Talon with `gcc 11.2.0`.
 Configure and building scripts includes:
 ```
 - kokkos 4.1.00: https://github.com/kokkos/kokkos
-- omega_h `reducedThrust` branch: https://github.com/SCOREC/omega_h, at commit: 7e19b3c
+- omega_h `reducedThrust` branch: https://github.com/SCOREC/omega_h, at commit: e1be29b
 - EnGPar master branch: https://github.com/SCOREC/EnGPar, at commit: 86e5fa5
 - Cabana master branch: https://github.com/ECP-copa/Cabana, at commit: ca6d9bd
-- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: 3b19b51
+- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: d6a53c5
 - PETSc 3.16.6: https://gitlab.com/petsc/petsc
 - XGCm master branch: https://github.com/SCOREC/xgcm at commit: 7ba8853
 ```
-using `cuda11.8/toolkit/11.8.0`, `gcc 11.2.0`, `mpich 3.3.2` by loading:
+using `cuda11.8/toolkit/11.8.0`, `gcc 11.3.0`, `mpich 3.3.2` by loading:
 ```
+module load gcc11/11.3.0
 module load cuda11.8/toolkit/11.8.0
-module load cmake/3.21.3
+module load cmake-gcc11/3.21.3
 module load mpich/ge/gcc/64/3.3.2
 ```
 With this, the loaded modules are:
 ```
- 1) shared                3) gcc/11.2.0                5) cmake/3.21.3           
- 2) slurm/slurm/23.02.2   4) cuda11.8/toolkit/11.8.0   6) mpich/ge/gcc/64/3.3.2 
+ 1) shared                3) gcc/11.2.0                5) mpich/ge/gcc/64/3.3.2   7) cmake-gcc11/3.21.3  
+ 2) slurm/slurm/23.02.2   4) cuda11.8/toolkit/11.8.0   6) gcc11/11.3.0  
 ```
 
 Build the libraries in order:

@@ -9,8 +9,8 @@ Configure and building scripts includes:
 - EnGPar master branch: https://github.com/SCOREC/EnGPar, at commit: 57b3f57
 - Cabana master branch: https://github.com/ECP-copa/Cabana, at commit: 3d777db
 - PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: a1cadc0
-- PETSc 3.19.0: https://gitlab.com/petsc/petsc
-- XGCm master branch: https://github.com/SCOREC/xgcm at commit: 90dbbe8
+- PETSc 3.16.6: https://gitlab.com/petsc/petsc
+- XGCm master branch: https://github.com/SCOREC/xgcm at commit: 7ba8853
 ```
 using `cudatoolkit/11.7`, `gcc 11.2.0`, `cray-mpich/8.1.25` by loading:
 ```

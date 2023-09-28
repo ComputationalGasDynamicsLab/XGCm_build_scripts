@@ -12,17 +12,16 @@ Configure and building scripts includes:
 - PETSc 3.16.6: https://gitlab.com/petsc/petsc
 - XGCm master branch: https://github.com/SCOREC/xgcm at commit: 7ba8853
 ```
-using `cuda11.8/toolkit/11.8.0`, `gcc 11.3.0`, `mpich 3.3.2` by loading:
+using `cuda11.8/toolkit/11.8.0`, `gcc 11.2.0`, `mpich 3.3.2` by loading:
 ```
-module load gcc11/11.3.0
 module load cuda11.8/toolkit/11.8.0
-module load cmake-gcc11/3.21.3
+module load cmake/3.21.3
 module load mpich/ge/gcc/64/3.3.2
 ```
 With this, the loaded modules are:
 ```
- 1) shared                3) gcc/11.2.0                5) mpich/ge/gcc/64/3.3.2   7) cmake-gcc11/3.21.3  
- 2) slurm/slurm/23.02.2   4) cuda11.8/toolkit/11.8.0   6) gcc11/11.3.0  
+ 1) shared                3) gcc/11.2.0                5) cmake/3.21.3           
+ 2) slurm/slurm/23.02.2   4) cuda11.8/toolkit/11.8.0   6) mpich/ge/gcc/64/3.3.2 
 ```
 
 Build the libraries in order:
@@ -52,7 +51,7 @@ Build the libraries in order:
 - run `./arch-talon.py` to configure;
 - make/build following the output from `PETSc` configuration, something like this:
   ```
-   make PETSC_DIR=/global/u2/z/zhangc20/xgcm/petsc PETSC_ARCH=arch-perlmutter all
+   make PETSC_DIR=/home/chonglin.zhang/xgcm/petsc PETSC_ARCH=arch-talon all
   ```
 
 (2) create a new folder called `install` within the `xgcm_install` directory: `xgcm_install/install`.

@@ -10,7 +10,7 @@ Configure and building scripts include:
 - PETSc 3.16.6: https://gitlab.com/petsc/petsc
 - XGCm master branch: https://github.com/SCOREC/xgcm, at commit: 26ead98
 ```
-using `cudatoolkit/11.7.1`, `gcc 11.4.1`, `mpich 3.4.3`.
+using `cuda toolkit 11.7`, `gcc 11.4.1`, `mpich 3.4.3`.
 
 Build the libraries in order:
 ```

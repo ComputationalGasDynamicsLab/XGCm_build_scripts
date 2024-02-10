@@ -1,6 +1,10 @@
 module load gcc/12.1.0
 module load cuda/12.2.0
 module load cmake/3.27.7
+# needed by PETSc
+#module load valgrind/3.20.0
+#module load hdf5/1.14.3
+#module load netlib-lapack/3.11.0
 
 export cuda=$CUDA_DIR
 export PATH=$cuda/bin:$PATH
@@ -41,8 +45,8 @@ mkdir -p xgcm/build
 cd xgcm/build
 
 cmake $xgcmsrc -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=mpicxx \
-               -DIS_TESTING=ON -DCMAKE_INSTALL_PREFIX=$xgcm \
-               -DXGCM_GPU_SOLVE=ON -DXGCM_INIT_GENE_PERT=ON \
+               -DIS_TESTING=OFF -DCMAKE_INSTALL_PREFIX=$xgcm \
+               -DXGCM_GPU_SOLVE=OFF -DXGCM_INIT_GENE_PERT=ON \
                -DXGC_DATA_DIR=$xgcmtestdir \
                -DXGCM_SNES_SOLVE=OFF -DXGCM_PS_CAB=OFF \
                -DCMAKE_CXX_FLAGS="-g -lineinfo"

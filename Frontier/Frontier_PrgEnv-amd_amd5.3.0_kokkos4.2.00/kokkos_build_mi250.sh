@@ -13,6 +13,7 @@ export kksrc=$srcroot/kokkos
 cd $installroot
 mkdir -p kokkos/build
 cd kokkos/build
+# note: for kokkos 4.2.00, need to add `-DCMAKE_CXX_STANDARD=17`
 cmake $kksrc \
       -DCMAKE_BUILD_TYPE=RelWithDebInfo \
       -DCMAKE_CXX_COMPILER=CC \

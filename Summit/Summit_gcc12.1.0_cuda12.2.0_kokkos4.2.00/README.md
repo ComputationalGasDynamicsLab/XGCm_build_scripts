@@ -4,13 +4,13 @@ The folder also include a sample run script on Summit.
 
 Configure and building scripts includes:
 ```
-- kokkos 3.7.02: https://github.com/kokkos/kokkos
-- omega_h master branch: https://github.com/SCOREC/omega_h, at commit: e1be29b
+- kokkos 4.2.00: https://github.com/kokkos/kokkos
+- omega_h master branch: https://github.com/SCOREC/omega_h, at commit: 08e643b
 - EnGPar master branch: https://github.com/SCOREC/EnGPar, at commit: 57b3f57
 - Cabana master branch: https://github.com/ECP-copa/Cabana, at commit: 9cc3824
-- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: d6a53c5
+- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: 7b55b1b
 - PETSc 3.16.6: https://gitlab.com/petsc/petsc
-- XGCm master branch: https://github.com/SCOREC/xgcm at commit: 7ba8853
+- XGCm master branch: https://github.com/SCOREC/xgcm at commit: f284d20
 ```
 using `gcc 12.1.0`, `cuda/12.2.0`, `spectrum-mpi/10.4.0.6-20230210` by loading:
 ```
@@ -45,7 +45,7 @@ Build the libraries in order:
 - run `./petsc_configure.sh` to configure;
 - make/build following the output from `PETSc` configuration, something like this:
   ```
-   make PETSC_DIR=/ccs/home/zhangc20/xgcm/xgcm_kokkos3.7.02/petsc PETSC_ARCH=arch-summit all
+   make PETSC_DIR=/ccs/home/zhangc20/xgcm/xgcm_kokkos4.2.00/petsc PETSC_ARCH=arch-summit all
   ```
 
 (2) create a new folder called `install` within the `xgcm_install` directory: `xgcm_install/install`.

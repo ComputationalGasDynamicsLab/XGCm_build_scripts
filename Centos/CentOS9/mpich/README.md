@@ -10,7 +10,7 @@ Configure and building scripts include:
 - PETSc 3.16.6: https://gitlab.com/petsc/petsc
 - XGCm master branch: https://github.com/SCOREC/xgcm, at commit: f284d20
 ```
-using `cuda toolkit 11.7`, `gcc 11.4.1`, `mpich 3.4.3`, and `kokkos 4.2.00`.
+using `cuda toolkit 11.7`, `gcc 11.4.1`, `mpich 3.4.3`, and `kokkos 4.2.00` on Nvidia A200.
 
 Build the libraries in order:
 ```

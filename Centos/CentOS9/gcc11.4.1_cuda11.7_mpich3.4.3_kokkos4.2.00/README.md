@@ -3,14 +3,14 @@
 Configure and building scripts include:
 ```
 - kokkos 4.2.00: https://github.com/kokkos/kokkos
-- omega_h master branch: https://github.com/SCOREC/omega_h, at commit: c5f1dc9
+- omega_h master branch: https://github.com/SCOREC/omega_h, at commit: 7a39707d
 - EnGPar master branch: https://github.com/SCOREC/EnGPar, at commit: 86e5fa5
-- Cabana master branch: https://github.com/ECP-copa/Cabana at commit: 9cc3824
-- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: 35c49f0
+- Cabana master branch: https://github.com/ECP-copa/Cabana at commit: 9a1ad60
+- PUMIPic master branch: https://github.com/SCOREC/pumi-pic, at commit: 7b55b1b0
 - PETSc 3.16.6: https://gitlab.com/petsc/petsc
-- XGCm master branch: https://github.com/SCOREC/xgcm, at commit: 26ead98
+- XGCm master branch: https://github.com/SCOREC/xgcm, at commit: ed1d8aa
 ```
-using `cuda toolkit 11.7`, `gcc 11.4.1`, `mpich 3.4.3`.
+using `cuda toolkit 11.7`, `gcc 11.4.1`, `mpich 3.4.3`, and `kokkos 4.2.00` on Nvidia A200.
 
 Build the libraries in order:
 ```

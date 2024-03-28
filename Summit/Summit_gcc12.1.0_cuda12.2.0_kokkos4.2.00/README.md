@@ -57,3 +57,29 @@ Build the libraries in order:
 
 (4) the final `XGCm` binary is in the following location: `xgcm_install/install/xgcm/build/test/XGCm`.
 This can be then copied to the test case directory (or linked in the run script) to run using the supplied run script.
+
+#### `XGCm` run script:
+To run `XGCm` use the `run_xgcm_summit.sh` script with the following `bsub` command:
+```
+bsub run_xgcm_summit.sh
+```
+In the below run script:
+- To use different number of nodes, change `-nnodes 1` to different values.
+- To be consistent with the number of nodes used, change `-n 6` to `number of nodes * 6`.
+- The lines starting with `./XGCm` are specific to `XGCm` and can be adjusted accordingly.
+```
+#!/bin/bash
+#BSUB -P FUS157
+#BSUB -W 0:60
+#BSUB -nnodes 1
+#BSUB -J Cyclone-590k
+#BSUB -o Cyclone-590k.%J
+#BSUB -e Cyclone-590k.%J
+
+module load gcc/12.1.0
+module load cuda/12.2.0
+jsrun -n 6 -a 1 -c 1 -g 1 --smpiargs "-gpu" \
+./XGCm --kokkos-num-threads=1 590kmesh.osh 590kmesh_6.cpn \
+1 1 bfs bfs 0 0 0 3 input_xgcm petsc petsc_xgcm_cpu.rc \
+-use_gpu_aware_mpi 0
+```

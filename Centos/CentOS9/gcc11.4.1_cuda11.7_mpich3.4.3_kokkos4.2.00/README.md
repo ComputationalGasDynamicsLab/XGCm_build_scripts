@@ -60,3 +60,8 @@ for example:
 
 (4) the final `XGCm` binary is in the following location: `xgcm/install/xgcm/build/test/XGCm`.
 This can be then copied to the test case directory (or linked in the run script) to run using the supplied run script.
+
+Note: for building `XGCm` to run the `Cyclone ITG` case, need to use:
+```
+-DXGCM_INIT_GENE_PERT=ON
+```

@@ -40,7 +40,7 @@ cmake $xgcmsrc -DCMAKE_BUILD_TYPE=RelWithDebInfo \
                -DCMAKE_CXX_FLAGS="-g" \
                -DXGCM_INIT_GENE_PERT=OFF \
                -DXGCM_GPU_SOLVE=ON \
-               -DXGCM_PS_CAB=OFF \
+               -DXGCM_PS_CAB=ON \
                -DIS_TESTING=ON \
                -DXGC_DATA_DIR=$xgcmtestdir \
                -DCMAKE_INSTALL_PREFIX=$xgcm
@@ -48,3 +48,6 @@ cmake $xgcmsrc -DCMAKE_BUILD_TYPE=RelWithDebInfo \
 make -j8 install
 
 ctest
+
+# Note: for building `XGCm` to run the `Cyclone ITG` case, need to use:
+# -DXGCM_INIT_GENE_PERT=ON
